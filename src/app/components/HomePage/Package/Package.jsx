@@ -55,7 +55,7 @@ const Package = () => {
           {ispPackages.map((pkg) => (
             <div
               key={pkg._id}
-              className="bg-white rounded-3xl shadow-lg overflow-hidden transition transform hover:scale-105 hover:shadow-2xl"
+              className="bg-white rounded-3xl shadow-lg overflow-hidden transition transform hover:scale-105 hover:shadow-2xl flex flex-col"
             >
               {/* Gradient Header */}
               <div className="w-full py-4 bg-gradient-to-r from-[#323A82] to-[#923D9C]">
@@ -65,7 +65,7 @@ const Package = () => {
               </div>
 
               {/* Card Content */}
-              <div className="p-6 text-center">
+              <div className="p-6 flex flex-col flex-grow justify-between">
                 {/* Icon */}
                 <div className="flex justify-center mb-6">{pkg.icon}</div>
 
@@ -81,8 +81,10 @@ const Package = () => {
                 <p className="text-4xl font-bold text-blue-500 mb-6">
                   ৳{pkg.price} / month
                 </p>
+              </div>
 
-                {/* CTA Button */}
+              {/* CTA Button */}
+              <div className="px-6 pb-6">
                 <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition transform hover:scale-110">
                   Get Started
                 </button>
