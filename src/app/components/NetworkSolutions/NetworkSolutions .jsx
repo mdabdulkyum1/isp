@@ -55,24 +55,6 @@ const NetworkSolutions = () => {
                         </div>
                     ))}
                 </div>
-
-                {/* Call to Action Button */}
-                <button className="mt-10 px-6 py-3 text-lg font-medium text-gray-800 border border-gray-400 rounded-full hover:bg-gray-200 transition">
-                    Request a Quote
-                </button>
-
-                {/* Contact Info */}
-                <p className="mt-6 text-gray-500">
-                    For more information call us at{" "}
-                    <a href="tel:8005671234" className="text-blue-500">
-                        800.567.1234
-                    </a>{" "}
-                    or{" "}
-                    <a href="#" className="text-blue-500">
-                        chat live
-                    </a>{" "}
-                    with a Jellynet representative.
-                </p>
             </div>
         </div>
     );

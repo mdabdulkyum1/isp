@@ -7,12 +7,18 @@ import OfferSection from "./components/OfferSection/OfferSection";
 export default function Home() {
   return (
     <div className="">
-      <Banner></Banner>
+      <div>
+        <Banner></Banner>
+      </div>
       <div className="bg-gray-100">
         <NetworkSolutions></NetworkSolutions>
       </div>
-      <OfferSection></OfferSection>
-      <Package></Package>
+      <div>
+        <Package></Package>
+      </div>
+      <div>
+        <OfferSection></OfferSection>
+      </div>
 
     </div>
   );
