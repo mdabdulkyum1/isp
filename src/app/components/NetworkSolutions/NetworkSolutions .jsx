@@ -41,11 +41,11 @@ const NetworkSolutions = () => {
                 </h2>
 
                 {/* Services Section */}
-                <div className="mt-8 grid grid-cols-1 justify-center items-center sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="mt-8 grid grid-cols-1 container mx-auto justify-center items-center sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {services.map((service) => (
                         <div
                             key={service.id}
-                            className="bg-white justify-center rounded-lg feature-card w-[300px] p-4 md:p-8 flex flex-col items-center transition transform hover:scale-105"
+                            className="bg-white justify-center rounded-lg feature-card  p-4 md:p-8 flex flex-col items-center transition transform hover:scale-105"
                         >
                             {service.icon}
                             <h4 className="text-xl font-semibold text-gray-900 mt-4">
