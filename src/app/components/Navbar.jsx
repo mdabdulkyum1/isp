@@ -2,10 +2,10 @@ import Link from "next/link";
 
 const Navbar = () => {
     const links = <>
-        <li className="uppercase text-teal-700 font-bold"><Link href='/'>Home</Link></li>
-        <li className="uppercase text-teal-700 font-bold"><Link href='/services'>Services</Link></li>
-        <li className="uppercase text-teal-700 font-bold"><Link href='/support'>Support</Link></li>
-        <li className="uppercase text-teal-700 font-bold"><Link href='/about'>About Us</Link></li>
+        <li className="uppercase text-white font-bold"><Link href='/'>Home</Link></li>
+        <li className="uppercase text-white font-bold"><Link href='/services'>Services</Link></li>
+        <li className="uppercase text-white font-bold"><Link href='/support'>Support</Link></li>
+        <li className="uppercase text-white font-bold"><Link href='/about'>About Us</Link></li>
     </>
 
     return (

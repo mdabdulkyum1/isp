@@ -18,7 +18,7 @@ const Banner = () => {
     }, [images.length]);
 
     return (
-        <div className="relative overflow-hidden h-[350px] md:h-[500px]">
+        <div className="relative overflow-hidden h-[350px] md:h-[600px]">
             {/* Background Image with Keyframe Animation */}
             <div className="absolute inset-0 w-full h-full">
                 {images.map((image, index) => (

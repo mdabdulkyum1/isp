@@ -1,8 +1,23 @@
 "use client";
 import { Player } from "@lottiefiles/react-lottie-player";
 import earth from "./Earth/animation-earth.json"; // Importing the Lottie JSON animation
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Global = () => {
+
+    const [showFeatures, setShowFeatures] = useState(false);
+    const [fast, setFast] = useState(0.5)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowFeatures(true);
+            setFast(0.1) 
+        }, 5000);
+
+        return () => clearTimeout(timer); // Cleanup timer
+    }, []);
+
     const features = [
         {
             id: 1,
@@ -93,17 +108,17 @@ const Global = () => {
     return (
         <section className="md:py-32 bg-gray-900 relative overflow-hidden ">
             {/* Lottie Animation Background */}
-            <div className="absolute inset-0 z-0 ">
+            <div className="absolute -inset-9  z-0 ">
                 <Player
                     autoplay
                     loop
                     src={earth}
                     style={{ width: "100%", height: "100%" }}
-                    speed={0.4}
+                    speed={fast}
                 />
             </div>
 
-            <div className=" container mx-auto relative z-10 ">
+            <div className={`${showFeatures ? "" : "hidden-map"} container mx-auto relative z-10 `}>
                 {/* Header Section */}
                 <div className="text-center mb-16">
                     <h2 className="text-5xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -116,9 +131,12 @@ const Global = () => {
 
                 {/* Feature Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {features.map((feature) => (
-                        <div
+                    {features.map((feature, index) => (
+                        <motion.div
                             key={feature.id}
+                            initial={{ opacity: 0, y: 50 }} // Start hidden and below
+                            animate={{ opacity: 1, y: 0 }} // Fade in and move up
+                            transition={{ duration: 3, delay: 2 }} // Stagger animation
                             className="bg-white/5 backdrop-blur-lg border border-none border-white/5 rounded-2xl shadow-lg p-6 text-center transition transform hover:scale-105 hover:shadow-2xl"
                         >
                             {/* Icon */}
@@ -131,7 +149,7 @@ const Global = () => {
 
                             {/* Description */}
                             <p className="text-gray-300">{feature.description}</p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
