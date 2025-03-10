@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaWifi, FaRocket, FaGlobe, FaBolt } from "react-icons/fa"; // Importing icons
 
 const Package = () => {

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaCloud, FaNetworkWired, FaMobileAlt, FaShieldAlt } from "react-icons/fa";
 
 const NetworkSolutions = () => {
